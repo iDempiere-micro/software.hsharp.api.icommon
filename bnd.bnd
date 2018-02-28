@@ -1,0 +1,6 @@
+#
+#   SOFTWARE HSHARP API ICOMMON
+#
+Import-Package: !software.hsharp.api.icommon*,*
+Export-Package: \
+ software.hsharp.api.icommon*
