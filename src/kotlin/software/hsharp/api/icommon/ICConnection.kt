@@ -11,4 +11,6 @@ interface ICConnection {
     val dbUid: String
 
     val dbPwd: String
+
+    val ssl : Boolean
 }
