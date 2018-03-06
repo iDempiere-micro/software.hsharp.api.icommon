@@ -1,15 +1,8 @@
 package software.hsharp.api.icommon
 
-import javax.sql.DataSource
+import java.sql.Connection
 
 interface IDatabase {
-
-    /**
-     * Create DataSource
-     * @return data source
-     */
-    val dataSource: DataSource
-
     /**
      * Get Status
      * @return status info or null if no local datasource available
@@ -35,4 +28,15 @@ interface IDatabase {
      * @param connection connection
      */
     fun connect(connection: ICConnection)
+
+    /**
+     * 	Get Cached Connection
+     */
+  	val CachedConnection : Connection
+
+    /**
+     * 	Cleanup connections that are not used using the connection provided
+     * @param connection connection
+     */
+    fun cleanup(connection: Connection)
 }
