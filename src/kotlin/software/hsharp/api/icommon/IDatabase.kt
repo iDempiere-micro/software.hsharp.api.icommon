@@ -1,6 +1,7 @@
 package software.hsharp.api.icommon
 
 import java.sql.Connection
+import javax.sql.DataSource
 
 interface IDatabase {
     /**
