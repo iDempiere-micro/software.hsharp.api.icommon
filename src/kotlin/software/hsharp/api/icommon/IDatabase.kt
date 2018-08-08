@@ -1,7 +1,6 @@
 package software.hsharp.api.icommon
 
 import java.sql.Connection
-import javax.sql.DataSource
 
 interface IDatabase {
     /**
@@ -22,7 +21,7 @@ interface IDatabase {
      */
     fun setup(parameters: IDatabaseSetup)
 
-    val defaultSetupParameters : IDatabaseSetup
+    val defaultSetupParameters: IDatabaseSetup
 
     /**
      * Connect
@@ -33,7 +32,7 @@ interface IDatabase {
     /**
      * 	Get Cached Connection
      */
-  	val CachedConnection : Connection
+    val CachedConnection: Connection?
 
     /**
      * 	Cleanup connections that are not used using the connection provided
